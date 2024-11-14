@@ -1,0 +1,31 @@
+1. Creating a Table
+
+   CREATE TABLE table_name (
+       column1_name column1_datatype,
+       column2_name column2_datatype,
+      ...
+   ) 
+   ROW FORMAT DELIMITED
+   FIELDS TERMINATED BY ','
+   STORED AS TEXTFILE;
+
+
+2. Altering a Table
+
+   a. Rename Table
+
+       ALTER TABLE old_table_name RENAME TO new_table_name;
+   b. Add a Column
+
+       ALTER TABLE table_name ADD COLUMNS (new_column_name new_column_datatype);
+   c. Replace All Columns (Modifies All Columns)
+
+       ALTER TABLE table_name REPLACE COLUMNS (column1_name column1_datatype, column2_name column2_datatype, ...);
+
+
+
+
+3. Dropping a Table
+	
+    DROP TABLE table_name;
+
