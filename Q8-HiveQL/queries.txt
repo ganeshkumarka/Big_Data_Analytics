@@ -1,0 +1,30 @@
+1. Sorting Data
+   -- Sort the table by sale_amount in descending order
+   SELECT product_id, sale_amount, sale_date
+   FROM sales
+   ORDER BY sale_amount DESC;
+
+
+2. Grouping and Aggregating Data
+
+
+   --> To perform aggregations like SUM, COUNT, AVG, etc., we can use the GROUP BY clause.
+
+    SELECT product_id, SUM(sale_amount) AS total_sales
+    FROM sales
+    GROUP BY product_id;
+
+   --> To find the average sales per region
+
+    SELECT region, AVG(sale_amount) AS avg_sales
+    FROM sales
+    GROUP BY region;
+
+3. Combining Sorting and Aggregation
+
+   SELECT region, SUM(sale_amount) AS total_sales
+   FROM sales 
+   GROUP BY region
+   ORDER BY total_sales DESC;
+
+
